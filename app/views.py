@@ -12,6 +12,7 @@ class UserLogin(APIView):
         serializer=LoginSerializer(data=request.data)
 
         if serializer.is_valid():
+            print("hello world")
             email=serializer.validated_data['email']
             password=serializer.validated_data['password']
             print(f"{email}{password}")    
